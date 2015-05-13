@@ -245,9 +245,7 @@ namespace ClockProCacheAlgorithm
                 }
                 else // if item is not referenced
                 {
-                    //TODO
-                    //SynchronizeWithServer() update object, which removed from cache, on server side
-                   // _writeToDb(data.Value);
+                    _writeToDb(data.Value);
                     meta.Type = PageType.Test; //change page type to test page
                     _dataCache[meta.Key] = null; // discard data in cache
                     _coldCount--;
